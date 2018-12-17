@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather:400,700|Open+Sans:400,600,700,800");
+/* Testing classes*/
+.black {
+  background-color: #333; }
+
+.brown {
+  background-color: #5F2B07; }
+
+/* Variable and mixin declaration */
+/* By default settings*/
+.mainBody {
+  background-color: white;
+  font-size: 0.85em; }
+
+h1, h2, h3, h4 {
+  font-family: "Merriweather", serif !important; }
+
+p, a {
+  font-family: "Open Sans", sans-serif; }
+
+.basicButton .btn-primary {
+  background: linear-gradient(to right, #434da0 40%, #8389b8 80%, #ffffff 113%);
+  border: none;
+  padding: 1rem 1.25rem;
+  font-size: 1rem;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  font-weight: 500; }
+
+/* Top navigation*/
+.top-navigation {
+  background-color: #36384b; }
+  .top-navigation p, .top-navigation div, .top-navigation i, .top-navigation a {
+    color: white; }
+  .top-navigation .cartNumber {
+    background-color: pink;
+    border-radius: 11px;
+    font-size: 12px;
+    padding: 4px;
+    margin: 0; }
+
+.navigation {
+  background-color: #434da0; }
+  .navigation .headerLogo {
+    height: 30px; }
+  .navigation a, .navigation p {
+    color: white; }
+  .navigation p {
+    margin-left: 5px; }
+
+/* First hero*/
+.first-hero {
+  background-image: url("../images/shapes/hero-wave-bottom.svg"), url("../images/smarter-living/interior-house-header.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom, center;
+  background-size: contain, cover;
+  width: 100%; }
+  .first-hero .heroText {
+    margin-top: 10%; }
+    .first-hero .heroText h1 {
+      font-size: 3rem;
+      color: #434da0; }
+    .first-hero .heroText .blueText {
+      font-weight: 700;
+      color: #434da0; }
+  .first-hero .girlPicture {
+    background: url("../images/smarter-living/girl-blob-cutout-header.png") no-repeat center;
+    background-size: contain;
+    margin-top: 5%;
+    /*max-width:100%;*/ }
+  .first-hero .benefits {
+    background-color: white;
+    width: 1000px;
+    height: auto;
+    /*padding:2.5em 6em;*/
+    padding: 2em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+    .first-hero .benefits h2 {
+      color: #434da0; }
+    .first-hero .benefits ul li {
+      list-style: none; }
+    .first-hero .benefits .benefit-title {
+      color: #434da0;
+      font-weight: 700; }
+
+.wave-first {
+  background: url("../images/shapes/hero-wave-bottom.svg") no-repeat center;
+  height: 300px;
+  background-size: cover;
+  position: relative;
+  margin-bottom: -30px; }
+
+/*Second hero section*/
+.second-section {
+  background: url("../images/shapes/blob-cutoff.svg") no-repeat left;
+  background-size: contain;
+  max-width: 100%;
+  margin-top: 10%; }
+  .second-section .leftImage {
+    background: url("../images/shared/dining-room-set.png") no-repeat left;
+    height: 300px;
+    background-size: cover; }
+  .second-section .blueBackground {
+    background-color: #434da0;
+    height: 100%;
+    min-height: 300px;
+    padding: 1em;
+    color: white;
+    margin-top: 5%;
+    min-height: 300px; }
+  .second-section .transparentButton .btn {
+    background-color: transparent;
+    border: solid #a2acff 2px;
+    border-radius: 2em;
+    -webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -ms-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in; }
+    .second-section .transparentButton .btn:hover {
+      border: solid #64eeb0 2px;
+      color: #64eeb0; }
+  .second-section .whiteBox {
+    background-color: white;
+    height: 100%;
+    min-height: 300px;
+    padding: 1em;
+    margin-top: 5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+
+/* Media queries*/
+@media screen and (min-width: 768px) {
+  .first-hero .benefits img {
+    width: 50%; }
+
+  .girlPicture {
+    height: 560px;
+    margin-top: 1em; } }
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .first-hero .girlPicture {
+    height: 300px;
+    margin-top: 50%; }
+
+  .leftImage {
+    margin-top: 5%; } }
+@media screen and (min-width: 991px) and (max-width: 1199px) {
+  .first-hero .girlPicture {
+    margin-top: 20%;
+    height: 400px; }
+
+  .leftImage {
+    margin-top: 5%; } }
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .girlPicture {
+    height: 225px; }
+
+  .benefit-title {
+    overflow-wrap: break-all; }
+
+  .leftImage {
+    margin: 0; } }
+@media screen and (min-width: 1200px) {
+  .leftImage {
+    margin-top: 5%; } }
+
+/*# sourceMappingURL=main.css.map */

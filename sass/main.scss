@@ -1,0 +1,271 @@
+//main.scss comment
+
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700|Open+Sans:400,600,700,800');
+
+/* Testing classes*/
+
+.black {
+	background-color: #333;
+}
+.brown {
+	background-color: #5F2B07;
+}
+
+/* Variable and mixin declaration */
+
+$darkBlue:#36384b;
+$ZucoraBlue:#434da0;
+$radiumColor:#64eeb0;
+$lightBlue:#a2acff;
+
+$headerText:'Merriweather', serif;
+$paragraph:'Open Sans', sans-serif;
+
+$minMobileWidth: 320px;
+$maxMobileWidth:767px;
+
+$tabletWidth:768px;
+$minLaptopWidth: 992px;
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+
+@mixin transition($what: all, $time: 0.2s, $how: ease-in-out) {
+    -webkit-transition: $what $time $how;
+    -moz-transition:    $what $time $how;
+    -ms-transition:     $what $time $how;
+    -o-transition:      $what $time $how;
+    transition:         $what $time $how;
+}
+
+/* By default settings*/
+
+.mainBody {
+	background-color: white;
+	font-size: 0.85em;
+}
+
+h1,h2,h3,h4{
+	font-family:$headerText !important;
+}
+p,a{
+	font-family: $paragraph;
+}
+
+.basicButton .btn-primary{
+	background: linear-gradient(to right, #434da0 40%, #8389b8 80%, #ffffff 113%);
+	border:none;
+	padding:1rem 1.25rem;
+	font-size: 1rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    font-weight: 500;
+
+}
+
+/* Top navigation*/
+
+.top-navigation {
+	background-color: $darkBlue;
+	p, div, i,a {
+		color: white;
+	}
+	.cartNumber {
+		background-color: pink;
+		border-radius: 11px;
+		font-size: 12px;
+		padding: 4px;
+		margin: 0;
+	}
+}
+.navigation {
+	background-color: $ZucoraBlue;
+	.headerLogo {
+		height: 30px;
+	}
+	a, p {
+		color: white;
+	}
+	p {
+		margin-left: 5px;
+	}
+}
+
+/* First hero*/
+.first-hero {
+	background-image: url('../images/shapes/hero-wave-bottom.svg'), url('../images/smarter-living/interior-house-header.png');
+	background-repeat: no-repeat, no-repeat;
+	background-position: bottom, center;
+	background-size: contain, cover;
+	//background-attachment: fixed;
+	//height: 800px;
+	width: 100%;
+
+
+	.heroText{
+		margin-top:10%;
+		h1{
+			font-size:3rem;
+			color: $ZucoraBlue;
+		}
+		.blueText{
+			font-weight: 700;
+			color:$ZucoraBlue;
+		}
+	}
+
+	.girlPicture{
+		background:url('../images/smarter-living/girl-blob-cutout-header.png') no-repeat center;
+		background-size: contain;
+		margin-top:5%;
+		/*max-width:100%;*/
+
+	}
+
+	.benefits{
+			background-color: white;
+			width:1000px;
+			height: auto;
+			/*padding:2.5em 6em;*/
+			padding:2em;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+			h2{
+				color:$ZucoraBlue;
+			}
+
+			ul li{
+				list-style: none;
+			}
+
+			.benefit-title{
+				color: $ZucoraBlue;
+				font-weight: 700;
+			}
+		}
+}
+.wave-first {
+	background: url('../images/shapes/hero-wave-bottom.svg') no-repeat center;
+	height: 300px;
+	background-size: cover;
+	position: relative;
+	margin-bottom: -30px;
+}
+
+/*Second hero section*/
+.second-section{
+	background:url('../images/shapes/blob-cutoff.svg') no-repeat left;
+	background-size: contain;
+	//height:500px;
+	max-width:100%;
+	margin-top:10%;
+
+	.leftImage{
+		//padding:0;
+		//margin-top:5%;
+		//min-height: 300px;
+		background:url('../images/shared/dining-room-set.png') no-repeat left;
+		height:300px;
+		background-size: cover;
+
+	}
+
+	.blueBackground{
+		background-color: $ZucoraBlue;
+		height:100%;
+		min-height: 300px;
+		padding:1em;
+		color:white;
+		margin-top: 5%;
+		min-height:300px;
+	}
+
+	.transparentButton .btn{
+		background-color: rgba(0,0,0,0);
+		border:solid $lightBlue 2px;
+		border-radius: 2em;
+		@include transition(all,0.5s,ease-in);
+
+		&:hover{
+		border:solid $radiumColor 2px;
+		color: $radiumColor;
+		
+		}
+	}
+
+	.whiteBox{
+		background-color: white;
+		height:100%;
+		min-height:300px;
+		padding: 1em;
+		margin-top:5%;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+
+	
+}
+
+/* Media queries*/
+@media screen and (min-width:768px){
+				.first-hero .benefits img{
+					width:50%;
+				}
+
+				.girlPicture{
+					height:560px;
+					margin-top:1em;
+				}
+
+				.leftImage{
+		//margin-left:-15px;
+
+	}
+			}
+
+@media screen and (min-width:768px) and (max-width:991px){
+	.first-hero .girlPicture{
+		height:300px;
+		margin-top:50%;
+	}
+	.leftImage{
+		//margin-left:-15px;
+		margin-top:5%;
+	}
+
+}
+
+@media screen and (min-width: 991px) and (max-width: 1199px){
+	.first-hero .girlPicture{
+		margin-top:20%;
+		height:400px;
+	}
+	.leftImage{
+		//margin-left:-15px;
+		margin-top:5%;
+	}
+}
+
+@media screen and(min-width: 320px) and (max-width:768px){
+	.girlPicture{
+		height:225px;
+	}
+
+	.benefit-title{
+		overflow-wrap: break-all;
+	}
+
+	.leftImage{
+		margin:0;
+	}
+
+}
+
+@media screen and (min-width:1200px){
+	.leftImage{
+		//margin-left:-15px;
+		margin-top:5%;
+	}
+}
