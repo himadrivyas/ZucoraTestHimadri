@@ -1,13 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Merriweather:400,700|Open+Sans:400,600,700,800");
 /* Testing classes*/
 .black {
-  background-color: #333; }
+  background-color: #333;
+  height: 400px;
+  width: 100%; }
 
 .brown {
   background-color: #5F2B07; }
 
 /* Variable and mixin declaration */
-.hrLine, .third-section .rewardsText .green-line {
+.hrLine, .third-section .rewardsText .green-line, .fourth-section .reviewerName .blackLine, .fourth-section .articles .orange-line {
   width: 50px;
   text-align: center;
   display: inline-block;
@@ -21,7 +23,8 @@
   font-size: 0.85em; }
 
 h1, h2, h3, h4 {
-  font-family: "Merriweather", serif !important; }
+  font-family: "Merriweather", serif !important;
+  color: #434da0; }
 
 p, a {
   font-family: "Open Sans", sans-serif; }
@@ -30,10 +33,15 @@ p, a {
   background: linear-gradient(to right, #434da0 40%, #8389b8 80%, #ffffff 113%);
   border: none;
   padding: 1rem 1.25rem;
-  font-size: 1rem;
+  font-size: 0.85em;
   border-radius: 2rem;
   text-transform: uppercase;
   font-weight: 500; }
+
+.smallTitle, .third-section .rewardsText .small-title, .fourth-section .articles .small-title {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif; }
 
 /* Top navigation*/
 .top-navigation {
@@ -148,9 +156,6 @@ p, a {
 .third-section {
   margin-top: 15%; }
   .third-section .rewardsText .small-title {
-    text-transform: uppercase;
-    font-weight: 600;
-    font-family: "Open Sans", sans-serif;
     font-size: 1rem;
     /*margin-top:5px;*/ }
   .third-section .rewardsText .green-line {
@@ -176,14 +181,56 @@ p, a {
 .greyBack {
   background: url("../images/shapes/wave-lastSection.svg") no-repeat center;
   background-size: cover;
-  height: 300px; }
+  height: 200px; }
 
 .fourth-section {
   background-color: #f7f7f7;
-  height: 400px;
+  height: auto;
   margin-top: -10px; }
+  .fourth-section .quoteSymbol {
+    width: 15%;
+    text-align: center; }
+  .fourth-section ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .fourth-section ul li {
+      display: inline-block; }
+  .fourth-section .reviewerName .leftArrow {
+    -webkit-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    transform: scaleX(-1);
+    width: 30%; }
+  .fourth-section .reviewerName .rightArrow {
+    width: 30%; }
+  .fourth-section .reviewerName .blackLine {
+    border-top: solid 3px #000;
+    width: 20px;
+    margin-bottom: 3px; }
+  .fourth-section .reviewerName .name {
+    font-weight: 650;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1em; }
+  .fourth-section .articles .small-title {
+    font-size: 1em; }
+  .fourth-section .articles .orange-line {
+    border-top: solid 3px #ffbaa6;
+    width: 40px; }
+  .fourth-section .articles h2 {
+    color: #434da0; }
+  .fourth-section .articles .thumbnail-image {
+    width: 50%;
+    padding: 5px; }
+  .fourth-section .articles .card-body {
+    padding: 0; }
+    .fourth-section .articles .card-body h5 {
+      font-family: "Merriweather", serif;
+      color: #434da0; }
 
 /* Media queries*/
+@media screen and (min-width: 320px) and (max-width: 576px) {
+  .articles {
+    margin-top: 10%; } }
 @media screen and (min-width: 576px) {
   .pinkZigzag img {
     margin-left: -75px; } }
