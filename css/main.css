@@ -7,6 +7,14 @@
   background-color: #5F2B07; }
 
 /* Variable and mixin declaration */
+.hrLine, .third-section .rewardsText .green-line {
+  width: 50px;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  margin-left: 0.85em;
+  margin-bottom: 5px; }
+
 /* By default settings*/
 .mainBody {
   background-color: white;
@@ -94,6 +102,7 @@ p, a {
 .second-section {
   background: url("../images/shapes/blob-cutoff.svg") no-repeat left;
   background-size: contain;
+  min-height: 600px;
   max-width: 100%;
   margin-top: 10%; }
   .second-section .leftImage {
@@ -112,6 +121,9 @@ p, a {
     background-color: transparent;
     border: solid #a2acff 2px;
     border-radius: 2em;
+    color: #a2acff;
+    font-size: 0.9em;
+    text-transform: uppercase;
     -webkit-transition: all 0.5s ease-in;
     -moz-transition: all 0.5s ease-in;
     -ms-transition: all 0.5s ease-in;
@@ -121,14 +133,70 @@ p, a {
       border: solid #64eeb0 2px;
       color: #64eeb0; }
   .second-section .whiteBox {
+    position: relative;
     background-color: white;
     height: 100%;
     min-height: 300px;
     padding: 1em;
     margin-top: 5%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+  .second-section .pinkZigzag img {
+    width: auto;
+    height: 50px; }
+
+/*Third section*/
+.third-section {
+  margin-top: 15%; }
+  .third-section .rewardsText .small-title {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+    /*margin-top:5px;*/ }
+  .third-section .rewardsText .green-line {
+    border-top: solid 3px #64eeb0; }
+  .third-section .rewardsText h2 {
+    color: #434da0;
+    font-family: "Merriweather", serif;
+    width: auto; }
+  .third-section .rewardsText .slashGrey {
+    width: 40%;
+    opacity: 0.4;
+    margin-top: 3em; }
+  .third-section .rewardsBackground {
+    background: url("../images/shapes/round-blob-solid.svg") no-repeat left;
+    background-size: contain;
+    max-width: 100%; }
+    .third-section .rewardsBackground .ladyRewards {
+      /*margin-top:10%;*/
+      margin-left: 4%;
+      width: 90%; }
+
+/*Fourth section*/
+.greyBack {
+  background: url("../images/shapes/wave-lastSection.svg") no-repeat center;
+  background-size: cover;
+  height: 300px; }
+
+.fourth-section {
+  background-color: #f7f7f7;
+  height: 400px;
+  margin-top: -10px; }
 
 /* Media queries*/
+@media screen and (min-width: 576px) {
+  .pinkZigzag img {
+    margin-left: -75px; } }
+/*@media screen and(min-width: 320px) and (max-width:768px){*/
+@media screen and (max-width: 768px) {
+  .girlPicture {
+    height: 225px; }
+
+  .benefit-title {
+    overflow-wrap: break-all; }
+
+  .leftImage {
+    margin: 0; } }
 @media screen and (min-width: 768px) {
   .first-hero .benefits img {
     width: 50%; }
@@ -145,20 +213,11 @@ p, a {
     margin-top: 5%; } }
 @media screen and (min-width: 991px) and (max-width: 1199px) {
   .first-hero .girlPicture {
-    margin-top: 20%;
+    margin-top: 25%;
     height: 400px; }
 
   .leftImage {
     margin-top: 5%; } }
-@media screen and (min-width: 320px) and (max-width: 768px) {
-  .girlPicture {
-    height: 225px; }
-
-  .benefit-title {
-    overflow-wrap: break-all; }
-
-  .leftImage {
-    margin: 0; } }
 @media screen and (min-width: 1200px) {
   .leftImage {
     margin-top: 5%; } }

@@ -41,6 +41,14 @@ $minLaptopWidth: 992px;
     transition:         $what $time $how;
 }
 
+.hrLine{
+	width:50px;
+		text-align: center;
+		display: inline-block;
+  		position: relative; 
+  		margin-left:0.85em;
+  		margin-bottom: 5px;
+}
 /* By default settings*/
 
 .mainBody {
@@ -159,7 +167,7 @@ p,a{
 .second-section{
 	background:url('../images/shapes/blob-cutoff.svg') no-repeat left;
 	background-size: contain;
-	//height:500px;
+	min-height:600px;
 	max-width:100%;
 	margin-top:10%;
 
@@ -187,6 +195,9 @@ p,a{
 		background-color: rgba(0,0,0,0);
 		border:solid $lightBlue 2px;
 		border-radius: 2em;
+		color: $lightBlue;
+		font-size: 0.9em;
+		text-transform: uppercase;
 		@include transition(all,0.5s,ease-in);
 
 		&:hover{
@@ -197,18 +208,110 @@ p,a{
 	}
 
 	.whiteBox{
+		position: relative;
 		background-color: white;
 		height:100%;
 		min-height:300px;
 		padding: 1em;
 		margin-top:5%;
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	}
 
+	}
+	.pinkZigzag img{
+			width:auto;
+			height:50px;
+		}
 	
 }
 
+/*Third section*/
+
+.third-section{
+	margin-top:15%;
+	.rewardsText{
+		.small-title{
+			text-transform: uppercase;
+			font-weight: 600;
+			font-family: $paragraph;
+			font-size: 1rem;
+			/*margin-top:5px;*/
+		}
+
+		.green-line{
+			border-top: solid 3px $radiumColor;
+			@extend .hrLine;
+
+		}
+
+		h2{
+			color: $ZucoraBlue;
+			font-family: $headerText;
+			width:auto;
+		}
+
+		.slashGrey{
+		    width: 40%;
+    		opacity: 0.4;
+    		margin-top:3em;
+		}
+	}
+	.rewardsBackground{
+		background:url('../images/shapes/round-blob-solid.svg') no-repeat left;
+		background-size: contain;
+		max-width:100%;		
+
+		.ladyRewards{
+			/*margin-top:10%;*/
+			margin-left:4%;
+			width:90%;
+		}
+	}
+}
+
+/*Fourth section*/
+.greyBack{
+		background:url('../images/shapes/wave-lastSection.svg') no-repeat center; 
+		background-size: cover;
+		height:300px;
+	}
+
+.fourth-section{
+		background-color: #f7f7f7;
+		height:400px;
+		margin-top: -10px;
+	
+}
+
+
 /* Media queries*/
+
+
+@media screen and (min-width:320px) and (max-width:576px){
+
+}
+
+@media screen and (min-width:576px){
+	.pinkZigzag img{
+		margin-left:-75px;
+	}
+}
+
+/*@media screen and(min-width: 320px) and (max-width:768px){*/
+	@media screen and (max-width:768px){
+	.girlPicture{
+		height:225px;
+	}
+
+	.benefit-title{
+		overflow-wrap: break-all;
+	}
+
+	.leftImage{
+		margin:0;
+	}
+
+}
+
 @media screen and (min-width:768px){
 				.first-hero .benefits img{
 					width:50%;
@@ -220,10 +323,13 @@ p,a{
 				}
 
 				.leftImage{
-		//margin-left:-15px;
+					//margin-left:-15px;
 
-	}
+					}
+
 			}
+
+
 
 @media screen and (min-width:768px) and (max-width:991px){
 	.first-hero .girlPicture{
@@ -237,30 +343,16 @@ p,a{
 
 }
 
+
 @media screen and (min-width: 991px) and (max-width: 1199px){
 	.first-hero .girlPicture{
-		margin-top:20%;
+		margin-top:25%;
 		height:400px;
 	}
 	.leftImage{
 		//margin-left:-15px;
 		margin-top:5%;
 	}
-}
-
-@media screen and(min-width: 320px) and (max-width:768px){
-	.girlPicture{
-		height:225px;
-	}
-
-	.benefit-title{
-		overflow-wrap: break-all;
-	}
-
-	.leftImage{
-		margin:0;
-	}
-
 }
 
 @media screen and (min-width:1200px){
