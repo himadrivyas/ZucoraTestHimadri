@@ -67,7 +67,9 @@ p,a{
 	font-family: $paragraph;
 }
 
-
+.container{
+	max-width:1000px;
+}
 
 .basicButton .btn-primary{
 	background: linear-gradient(to right, #434da0 40%, #8389b8 80%, #ffffff 113%);
@@ -82,8 +84,8 @@ p,a{
 
 .smallTitle{
 	text-transform: uppercase;
-			font-weight: 600;
-			font-family: $paragraph;
+	font-weight: 600;
+	font-family: $paragraph;
 }
 
 /* Top navigation*/
@@ -93,6 +95,10 @@ p,a{
 	p, div, i,a {
 		color: white;
 	}
+
+	.green-text{
+		color:$radiumColor;
+	}
 	.cartNumber {
 		background-color: pink;
 		border-radius: 11px;
@@ -100,19 +106,64 @@ p,a{
 		padding: 4px;
 		margin: 0;
 	}
+
+	.top-links{
+		a{
+			color: white;
+			@include transition(backrground,0.5s,ease-in-out);
+			i{
+				color:$lightBlue;
+			}
+			&:hover{
+				background-color: $lightBlue;
+				color: $darkBlue;
+
+				i{
+					color: $darkBlue;
+				}
+			}
+
+		}
+	}
 }
-.navigation {
+.navigation{
 	background-color: $ZucoraBlue;
 	.headerLogo {
-		height: 30px;
+		//width:15%;
+		height: 45px;
 	}
-	a, p {
+	a{
 		color: white;
-	}
-	p {
-		margin-left: 5px;
+	
+	@include transition(all,0.5s,ease-in-out);
+
+		&:hover{
+		border:solid $radiumColor 2px;
+		color: $radiumColor;
+		border-radius: 20px;
 	}
 }
+
+	p {
+		margin-left: 5px;
+		color: white;
+	}
+
+	.logoName{
+		font-size:1rem;
+	}
+
+	.navLinks{
+	@include transition(all,0.5s,ease-out);
+}
+
+.hamburger-menu{
+	display: none;
+	@include transition(all,0.5s,ease-out);
+	}
+}
+
+
 
 /* First hero*/
 .first-hero {
@@ -283,13 +334,18 @@ p,a{
 .greyBack{
 		background:url('../images/shapes/wave-lastSection.svg') no-repeat center; 
 		background-size: cover;
-		height:200px;
+		height:300px;
 	}
 
 .fourth-section{
 		background-color: #f7f7f7;
 		height:auto;
 		margin-top: -10px;
+
+
+	h4{
+		color: $ZucoraBlue;
+	}
 
 	.quoteSymbol{
 		width:15%;
@@ -367,7 +423,111 @@ p,a{
 				//padding:5px;
 			}
 	}
+
+	.about-us{
+		h4{
+			color: $ZucoraBlue;
+
+		}
+		.aboutUs-icons{
+			img{
+				width:50%;
+			}
+
+			p{
+				//overflow-wrap: break-word;
+				width:auto;
+				font-size:0.85rem;
+			}
+		}
+	}
 }
+
+/*footer*/
+.footer-section{
+	background:url('../images/footer.jpeg')center;
+	background-size: cover;
+	height:400px;
+
+	.blueBack{
+		background-color: $ZucoraBlue;
+		height:auto;
+	}
+
+	.logo-social-section{
+		.headerLogo{
+			width:15%;
+			text-align: center;
+		}
+		p{
+			color: white;
+		}
+
+		ul{
+			list-style: none;
+			color: white;
+			margin:0;
+			padding:0;
+
+			li{
+				display: inline-block;
+			}
+		}
+	}
+
+
+	.transparentButton .btn{
+		background-color: rgba(0,0,0,0);
+		border:solid $lightBlue 2px;
+		border-radius: 2em;
+		color: $lightBlue;
+		font-size: 0.9em;
+		text-transform: uppercase;
+		@include transition(all,0.5s,ease-in);
+
+		&:hover{
+		border:solid $radiumColor 2px;
+		color: $radiumColor;
+		
+		}
+	}
+
+	.all-links{
+		a{
+			color: white;
+		}
+		ul{
+			list-style: none;
+			color: white;
+			font-family: $paragraph;
+			padding-left:5px;
+		}
+	}
+
+	.darkBlue-background{
+		background-color: $darkBlue;
+		height:auto;
+		padding:10px;
+
+		.copyright-section{
+			
+				color: white;
+				margin:0;
+				padding:0;
+
+				p{
+					display: inline;
+					margin-left:1em;
+				}
+
+			span{
+				font-size:3.5em;
+				text-align: center;
+			}
+		}
+	}
+}
+
 
 
 /* Media queries*/
@@ -377,11 +537,29 @@ p,a{
 	.articles{
 		margin-top:10%;
 	}
+
+	.footer-section{
+		margin-top:5em;
+	}
+
+	.hamburger-menu{
+		display: block;
+
+	}
+	
 }
 
 @media screen and (min-width:576px){
 	.pinkZigzag img{
 		margin-left:-75px;
+	}
+
+	.reviews-section{
+		margin-top:11em;
+	}
+
+	.about-us{
+		margin-top:15em;
 	}
 }
 
@@ -397,6 +575,20 @@ p,a{
 
 	.leftImage{
 		margin:0;
+	}
+
+	.all-links{
+		margin-top:3em;
+	}
+
+	.navigation .navLinks{
+		//display: none;
+		//visibility: none;
+	}
+
+	.hamburger-menu{
+		//display: block;
+
 	}
 
 }

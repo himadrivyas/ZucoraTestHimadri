@@ -25,11 +25,11 @@
 		<section class="container-fluid top-navigation">
 			<h2 class="sr-only">Top navigation with information about shipping, search bar,login and FR selector. </h2>
 			<div class="row">
-				<div class="col-md-6 col-sm-12">
-					<p class="text-uppercase text-center">Canada-wide shipping available. Free on orders over $39</p>
+				<div class="col-md-6 col-sm-12 mt-2">
+					<p class="text-uppercase text-center">Canada-wide shipping available. Free on orders over <span class="green-text">$39</span></p>
 				</div>
 				<div class="col-sm-12 col-md-6">
-					<ul class="nav justify-content-end">
+					<ul class="nav justify-content-end top-links">
 						<li class="nav-item">
 							<a class="nav-link active text-uppercase" href="#"><i class="fas fa-search fa-fw"></i> Search</a>
 						</li>
@@ -50,13 +50,16 @@
 				</div>
 			</div>
 		</section>
-		<navigation class="navigation row no-gutters">
+		<nav class="navigation row no-gutters pb-3 ">
 			<h2 class="sr-only">Main navigation of website with Zucora logo left side and page links on the right side.</h2>
-			<div class="col-sm-4">
-				<div class="nav justify-content-center"><img alt="Zucra logo" src="images/icons/ZH_Icon_White.svg" class="headerLogo float-left"><p class="text-uppercase float-left">ZucoraHome</p></div>
+			<div class=" col-12 col-sm-4 mt-3">
+				<div class="justify-content-center ml-3">
+					<img alt="Zucora logo" src="images/icons/ZH_Icon_White.svg" class="headerLogo float-left">
+					<p class="text-uppercase float-left ml-2 mt-2 logoName"><span class="font-weight-bold">Zucora</span>Home</p>
+				</div>
 			</div>
-			<div class="col-sm-8">
-				<ul class="nav justify-content-end">
+			<div class="col-sm-8 navLinks">
+				<ul class="nav justify-content-end mt-4">
 					<li class="nav-item">
 						<a class="nav-link active text-uppercase" href="#">Service Request</a>
 					</li>
@@ -74,7 +77,12 @@
 					</li>
 				</ul>
 			</div>
-		</navigation>
+			<div class="hamburger-menu">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+				</button>
+			</div>
+		</nav>
 		<section class="first-hero container-fluid">
 			<h3 class="sr-only">First banner of the website with the information of smart living and benefits of being a member.</h3>
 			<div class="container">
@@ -153,9 +161,9 @@
 		<section class="fourth-section container-fluid">
 			<h3 class="sr-only">A section about reviews, articles links and about Zucora company.</h3>
 			<div class="row justify-content-center">
-				<div class="col-12 col-sm-4 text-center">
+				<div class="col-12 col-sm-4 text-center reviews-section">
 					<img alt="icon of a quote" src="images/icons/icon-quote.svg" class="quoteSymbol">
-					<h4>See what our Members say</h4>
+					<h4 class="mt-2">See what our Members say</h4>
 					<p>Just quick thank you professionalism. Our technician explained the process before he began and impressed us with his friendly manner. I will recommend your services to friends and family. Truly a satisfied customer.</p>
 					<ul class="">
 						<li><i class="fas fa-star"></i></li>
@@ -206,21 +214,105 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-12 col-sm-4"></div>
+				<div class="col-12 col-sm-4 about-us">
+					<h4 class="text-center">Why Zucora Home?</h4>
+					<!-- <div class="row justify-content-center"> -->
+					<div class="row justify-content-center p-3 aboutUs-icons">
+						<div class="col-sm-12 col-md-4 text-center">
+							<img alt="Icon of price tag with star." src="images/icons/icon-experienced.svg" class="img-fluid">
+							<p class="text-center text-uppercase font-weight-bold">Experienced</p>
+							
+						</div>
+						<div class="col-sm-12 col-md-4 text-center">
+							<img alt="Icon of piggy bank for saving money." src="images/icons/icon-nationwide.svg" class="img-fluid">
+							<p class="text-center text-uppercase font-weight-bold">Nationwide</p>
+							
+						</div>
+						<div class="col-sm-12 col-md-4 text-center"><img alt="Icon of smiley emoji with computer mouse on right side." src="images/icons/icon-guaranteed.svg" class="img-fluid">
+							<p class="text-center text-uppercase font-weight-bold">Guaranteed</p>
+							
+						</div>
+					</div>
+					<!-- </div> -->
+					<div class="basicButton text-center mb-3"><a href="#/" class="btn-primary btn">About us</a></div>
+				</div>
+			</section>
+			<footer class="container-fluid footer-section">
+				<div class="row blueBack">
+					<div class="container">
+						<div class="row mt-5">
+							<div class="col-6 col-sm-6 col-md-3 order-1 logo-social-section justify-content-center">
+								<img alt="Zucra logo" src="images/icons/ZH_Icon_White.svg" class="headerLogo float-left img-fluid">
+								<p class="text-uppercase float-left ml-2 mt-2"><span class="font-weight-bold">Zucora</span>Home</p>
+							</div>
+							<div class="col-6 col-sm-6 col-md-2 order-sm-2 order-2 order-md-3">
+								<div class="transparentButton text-center"><a href="#/" class="btn btn-primary">service request</a></div>
+							</div>
+							<div class="col-12 col-sm-12 col-md-7 order-sm-3 order-3 order-md-2">
+								<div class="row justify-content-center">
+									<div class="col-3 col-sm-3 all-links">
+										<ul><p class="font-weight-bold text-uppercase">About</p>
+										<li><a href="#/">Contact Us</a></li>
+										<li><a href="#/">About Us</a></li>
+										<li><a href="#/">Our Team</a></li>
+										<li><a href="#/">Join Us</a></li>
+										<li><a href="#/">Reviews</a></li>
+									</ul>
+								</div>
+								<div class="col-3 col-sm-3 all-links">
+									<ul><p class="font-weight-bold text-uppercase">Member centre</p>
+									<li><a href="#/">What is Smarter Living?</a></li>
+									<li><a href="#/">Member Login</a></li>
+									<li><a href="#/">Redeem Rewards</a></li>
+									<li><a href="#/">Blog</a></li>
+									<li><a href="#/">FAQ</a></li>
+								</ul>
+							</div>
+							<div class="col-3 col-sm-3 all-links">
+								<ul><p class="font-weight-bold text-uppercase">Products & Services</p>
+								<li><a href="#/">Smarter Home Control</a></li>
+								<li><a href="#/">Service Plans</a></li>
+								<li><a href="#/">Smarter Home Products</a></li>
+								<li><a href="#/">Order & Returns</a></li>
+								<li><a href="#/">Shop Now</a></li>
+							</ul>
+						</div>
+						<div class="col-3 col-sm-3 all-links">
+							<ul><p class="font-weight-bold text-uppercase">Partners</p>
+							<li><a href="#/">I am a Retailer</a></li>
+							<li><a href="#/">I am a Contractor</a></li>
+						</ul>
+					</div>
+				</div>
 			</div>
-		</section>
-		<!-- <script src="js/vendor/modernizr-3.5.0.min.js"></script> -->
-		<!-- Bootstrap Jquery & other scripts -->
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-		<!-- <script src="js/plugins.js"></script> -->
-		<script src="js/main.js"></script>
-		<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-		<script>
-		window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-		ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
-		</script>
-		<script src="https://www.google-analytics.com/analytics.js" async defer></script>
-	</body>
+			
+		</div>
+		
+	</div>
+</div>
+<div class="row darkBlue-background">
+	<div class="container">
+		<div class="col-12 col-sm-12 copyright-section">
+			
+			<p>Copyright Zucora Inc.2018</p>
+			<p class="mb-3">Privacy Policy<span>.</span>Terms and Contditions<span>.</span>Sitemap</p>
+			
+		</div>
+	</div>
+</div>
+</footer>
+<!-- <script src="js/vendor/modernizr-3.5.0.min.js"></script> -->
+<!-- Bootstrap Jquery & other scripts -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<!-- <script src="js/plugins.js"></script> -->
+<script src="js/main.js"></script>
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
 </html>
